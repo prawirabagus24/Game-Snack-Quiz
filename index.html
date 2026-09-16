@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🐍 SNAKE QUIZ</h1>
+  <div class="subtitle">Kendalikan ular untuk memakan jawaban yang BENAR!</div>
+
+  <div id="hud">
+    <div class="hud-item">Skor<br><span id="score">0</span></div>
+    <div class="hud-item">Nyawa<br><span id="lives">❤️❤️❤️</span></div>
+    <div class="hud-item">Level<br><span id="level">1</span></div>
+    <div class="hud-item">Combo<br><span id="combo">0</span></div>
+    <div class="hud-item">Top Skor<br><span id="highscore">0</span></div>
+  </div>
+
+  <div id="question-box">
+    <div id="question-text">Memuat soal...</div>
+    <div id="options-legend"></div>
+  </div>
+
+  <div class="canvas-wrap">
+    <canvas id="game" width="480" height="480"></canvas>
+    <div id="countdown"></div>
+  </div>
+
+  <div id="controls-mobile">
+    <button id="up">↑</button>
+    <button id="left">←</button>
+    <button id="down">↓</button>
+    <button id="right">→</button>
+  </div>
+
+  <div id="overlay">
+    <h2 id="overlay-title">Game Over</h2>
+    <p id="overlay-text">Skor akhir kamu: 0</p>
+    <p id="overlay-highscore"></p>
+    <button id="restart-btn">Main Lagi</button>
+  </div>
+
+  <div id="start-overlay">
+    <h2>Selamat Datang di Snake Quiz!</h2>
+    <p>
+      Setiap pilihan jawaban (A, B, C, D) muncul sebagai ayam 🍗 berwarna di papan, sesuai warna
+      di daftar jawaban bawah soal. Arahkan ularmu ke jawaban yang BENAR. Jawaban salah akan
+      mengurangi nyawa. Makin banyak jawaban benar berturut-turut, combo makin besar!
+    </p>
+    <button id="start-btn">Mulai Main</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
