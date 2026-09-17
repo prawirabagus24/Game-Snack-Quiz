@@ -4,12 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Snake Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🐍 SNAKE QUIZ</h1>
-  <div class="subtitle">Kendalikan ular untuk memakan jawaban yang BENAR!</div>
+  <div class="bg-bubbles">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <h1 class="wiggle-title">🐍 SNAKE QUIZ</h1>
+  <div class="subtitle">Kendalikan ular untuk memakan jawaban yang BENAR! (IPA SD)</div>
 
   <div id="hud">
     <div class="hud-item">Skor<br><span id="score">0</span></div>
@@ -27,6 +33,8 @@
   <div class="canvas-wrap">
     <canvas id="game" width="480" height="480"></canvas>
     <div id="countdown"></div>
+    <div id="levelup-banner">🎉 LEVEL UP! 🎉</div>
+    <div id="praise-toast"></div>
   </div>
 
   <div id="controls-mobile">
@@ -44,13 +52,17 @@
   </div>
 
   <div id="start-overlay">
-    <h2>Selamat Datang di Snake Quiz!</h2>
-    <p>
-      Setiap pilihan jawaban (A, B, C, D) muncul sebagai ayam 🍗 berwarna di papan, sesuai warna
-      di daftar jawaban bawah soal. Arahkan ularmu ke jawaban yang BENAR. Jawaban salah akan
-      mengurangi nyawa. Makin banyak jawaban benar berturut-turut, combo makin besar!
-    </p>
-    <button id="start-btn">Mulai Main</button>
+    <div class="start-card">
+      <div class="start-icon">🐍</div>
+      <h2>SNAKE QUIZ</h2>
+      <p class="tagline">Arahkan ular ke jawaban yang benar!</p>
+      <div class="start-features">
+        <div class="feature-item"><span>🍗</span>Jawaban jadi makanan</div>
+        <div class="feature-item"><span>❤️</span>3 nyawa</div>
+        <div class="feature-item"><span>🔥</span>Combo & skor</div>
+      </div>
+      <button id="start-btn">▶ Mulai Main</button>
+    </div>
   </div>
 
 <script src="script.js"></script>
